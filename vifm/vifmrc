@@ -64,7 +64,7 @@ set runexec
 
 " Selected color scheme
 
-colorscheme Default
+colorscheme gruvbox
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -446,9 +446,9 @@ nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
 
 " My customizations --Anssi, 2021-10-10
-nnoremap ,e :e ~/.config/vifm/vifmrc<cr>
-nnoremap ,t :touch<space> 
-nnoremap ,d :mkdir<space> 
+nnoremap ,e :write | execute ':!%n${EDITOR:-vim} $MYVIFMRC' | restart<cr>
+nnoremap ,t :touch<space>
+nnoremap ,d :mkdir<space>
 
 " ------------------------------------------------------------------------------
 
